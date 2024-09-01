@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // write a program to print the characters starting from the second vowel
+
+      let str = "Second Vowel";
+      let res = "";
+      let vowelCount = 0;
+      for (i = 0; i < str.length; i++) {
+        if (
+          str[i] == "a" ||
+          str[i] == "e" ||
+          str[i] == "i" ||
+          str[i] == "o" ||
+          str[i] == "u"
+        ) {
+          vowelCount++;
+        }
+        if (vowelCount >= 2) {
+          for (j = i; j < str.length; j++) {
+            res = res + str[j];
+          }
+          break;
+        }
+      }
+      console.log(res);
+
+      // write a program to implement trim end functionality
+
+      debugger;
+      let input = "     trim end     ";
+      let result = "";
+      let endIndex =0;
+      for (let i = input.length - 1; i >= 0; i--) {
+        if (input[i] !== " ") {
+          endIndex = i;
+          break;
+        }
+      }
+      for (let j = 0; j <= endIndex; j++) {
+        result += input[j];
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>
